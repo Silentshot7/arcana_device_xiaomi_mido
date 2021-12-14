@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
 # Inherit some common Arcane stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
@@ -37,7 +37,7 @@ BOARD_VENDOR := Xiaomi
 TARGET_BOOT_ANIMATION_RES := 1080
 ARCANA_DEVICE := Mido
 ARCANA_OFFICIAL := true
-ARCANA_MAINTAINER := Alone0316
+ARCANA_MAINTAINER := Alone0316/VastroLorde
 TARGET_SUPPORTS_BLUR := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
