@@ -5,3 +5,6 @@ allow platform_app hal_alarm_qti_hwservice:hwservice_manager find;
 allow platform_app sysfs_fps:file { read };
 allow platform_app sysfs_fps:file { open };
 allow platform_app sysfs_fps:file { getattr };
+
+allow platform_app vendor_default_prop:file { getattr  open };
+allow platform_app zygote:unix_stream_socket { getopt };

@@ -1,1 +1,4 @@
 dontaudit untrusted_app virtual_ab_prop:file read;
+allow untrusted_app zygote:unix_stream_socket { getopt };
+allow untrusted_app_29 vendor_default_prop:file { getattr  open };
+allow untrusted_app_29 zygote:unix_stream_socket { getopt };

@@ -19,3 +19,7 @@ allow qti_init_shell sysfs_torch:dir search;
 allow qti_init_shell sysfs_torch:file rw_file_perms;
 allow qti_init_shell sysfs_vibrator:dir search;
 allow qti_init_shell sysfs_vibrator:file rw_file_perms;
+
+#System Data file
+allow qti_init_shell system_data_file:dir { add_name  remove_name  write };
+allow qti_init_shell system_data_file:file { open  create  getattr  read  setattr  unlink };
