@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/mido/device.mk)
 # Inherit some common Arcane stuff.
 $(call inherit-product, vendor/aosp/config/common.mk)
 
+# Inherit some comon nothing stuff
+$(call inherit-product, vendor/nothing/config.mk)
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
 PRODUCT_NAME := aosp_mido
@@ -36,8 +39,8 @@ BOARD_VENDOR := Xiaomi
 #Arcane Flags
 TARGET_BOOT_ANIMATION_RES := 1080
 ARCANA_DEVICE := Mido
-ARCANA_OFFICIAL := true
-ARCANA_MAINTAINER := Alone0316/VastoLorde
+ARCANA_OFFICIAL := false
+ARCANA_MAINTAINER := Silentshot7
 WITH_GAPPS := true
 TARGET_SUPPORTS_BLUR := true
 PREBUILT_LAWNCHAIR := true
@@ -53,7 +56,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="mido-user 7.0 NRD90M V9.6.1.0.NCFMIFD release-keys"
+    PRIVATE_BUILD_DESC="mido-user $(PLATFORM_VERSION) $(BUILD_ID) $(shell date -u +%s) release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "xiaomi/mido/mido:7.0/NRD90M/V9.6.1.0.NCFMIFD:user/release-keys"
+BUILD_FINGERPRINT := "xiaomi/mido/mido:$(PLATFORM_VERSION)/$(BUILD_ID)/$(shell date -u +%H%M):user/release-keys"
