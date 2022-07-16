@@ -24,9 +24,6 @@ $(call inherit-product, device/xiaomi/mido/device.mk)
 # Inherit some common Arcane stuff.
 $(call inherit-product, vendor/aosp/config/common.mk)
 
-# Inherit some comon nothing stuff
-$(call inherit-product, vendor/nothing/config.mk)
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
 PRODUCT_NAME := aosp_mido
